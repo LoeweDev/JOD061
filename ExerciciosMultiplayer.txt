@@ -1,0 +1,224 @@
+Atividade 1:
+
+1. Verificar o endereçamento de um host.
+
+a) Abra o Prompt de Comando no Windows.
+
+b) Execute o comando ipconfig. Quais os endereços IPs da sua estação, da máscara de rede e do gateway padrão?
+Rspt>   IP: 192.168.1.5	
+	Máscara de Rede: 255.255.255.0
+	Gateway: fe80::b2ac:d2ff:fe6c:6cb7%16
+
+c) Calcule os endereços de rede IPv4 a partir do seu endereço IP da máscara de rede.
+Rspt> 1 a 255
+
+
+d) Execute o comando ipconfig/all. Quais as informações foram apresentadas a mais?
+Rspt> Nome do Laptop, Adaptador de Ethernet, Adaptador de Rede sem fio local 3, Adaptador de Rede sem fio local 2,
+Adaptador de rede Wi-Fi.
+
+e) Execute o comando ipconfig/release *Con*. Quai foi o resultado?
+Rspt> Nenhuma operação pode ser executada em Ethernet enquanto a
+mídia estiver desconectada.
+Nenhuma operação pode ser executada em Conexão Local* 3 enquanto a
+mídia estiver desconectada.
+Nenhuma operação pode ser executada em Conexão Local* 2 enquanto a
+mídia estiver desconectada.
+
+f) Execute o comando ipconfig/renew. Qual foi o resultado?
+Rspt> Nenhuma operação pode ser executada em Ethernet enquanto a
+mídia estiver desconectada.
+Nenhuma operação pode ser executada em Conexão Local* 3 enquanto a
+mídia estiver desconectada.
+Nenhuma operação pode ser executada em Conexão Local* 2 enquanto a
+mídia estiver desconectada.
+
+g) Execute o comando ipconfig/displaydns. Quai foi o resultado?
+Rspt> Mostrou as informações de conexão com os sites em que estou conectado no meu browser.
+
+h) Execute o comando ipconfig/flushdns em seguida o comando ipconfig/displaydns. Quai foi o resultado?
+Rspt> Configuração de IP do Windows
+Liberação do Cache do DNS Resolver bem-sucedida.
+
+2. Testar a conectividade física entre dois hosts.
+
+a) Execute o comando ping seguido do endereço IP da sua estação, identificado no item anterior. Qual foi o resultado?
+Rspt> Estatísticas do Ping para 192.168.1.5:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 0ms, Máximo = 0ms, Média = 0ms
+
+b) Execute novamente o comando anterior acrescentando o parametro -t. Qual foi o resultado?
+Estatísticas do Ping para 192.168.1.5:
+    Pacotes: Enviados = 54, Recebidos = 54, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 0ms, Máximo = 1ms, Média = 0ms
+Control-C
+^C
+
+c) Execute o comando ping seguido do endereço de loopback. Qual foi o resultado?
+Disparando LAPTOP-T73T4MVO [::1] com 32 bytes de dados:
+Resposta de ::1: tempo<1ms
+Resposta de ::1: tempo<1ms
+Resposta de ::1: tempo<1ms
+Resposta de ::1: tempo<1ms
+
+Estatísticas do Ping para ::1:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 0ms, Máximo = 0ms, Média = 0ms
+
+d) Execute o comando ping seguido do endereço do gateway padrão. Qual foi o resultado? 
+Disparando fe80::b2ac:d2ff:fe6c:6cb7%16 com 32 bytes de dados:
+Resposta de fe80::b2ac:d2ff:fe6c:6cb7%16: tempo=80ms
+Resposta de fe80::b2ac:d2ff:fe6c:6cb7%16: tempo=4ms
+Resposta de fe80::b2ac:d2ff:fe6c:6cb7%16: tempo=2ms
+Resposta de fe80::b2ac:d2ff:fe6c:6cb7%16: tempo=6ms
+
+Estatísticas do Ping para fe80::b2ac:d2ff:fe6c:6cb7%16:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 2ms, Máximo = 80ms, Média = 23ms
+
+e) Execute o comando ping seguido do nome da sua estação. Qual foi o resultado?
+Disparando LAPTOP-T73T4MVO [fe80::19e5:8b19:4883:2a27%16] com 32 bytes de dados:
+Resposta de fe80::19e5:8b19:4883:2a27%16: tempo<1ms
+Resposta de fe80::19e5:8b19:4883:2a27%16: tempo<1ms
+Resposta de fe80::19e5:8b19:4883:2a27%16: tempo<1ms
+Resposta de fe80::19e5:8b19:4883:2a27%16: tempo<1ms
+
+Estatísticas do Ping para fe80::19e5:8b19:4883:2a27%16:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 0ms, Máximo = 0ms, Média = 0ms
+
+f) Execute o comando ping seguido do host www.iesb.br. Qual foi o resultado?
+Disparando www.iesb.br [54.174.194.96] com 32 bytes de dados:
+Resposta de 54.174.194.96: bytes=32 tempo=191ms TTL=99
+Resposta de 54.174.194.96: bytes=32 tempo=181ms TTL=99
+Resposta de 54.174.194.96: bytes=32 tempo=181ms TTL=99
+Resposta de 54.174.194.96: bytes=32 tempo=180ms TTL=99
+
+Estatísticas do Ping para 54.174.194.96:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 180ms, Máximo = 191ms, Média = 183ms
+
+g) Execute o comando ping seguido do host intranet.iesb.br. Qual foi o resultado?
+A solicitação ping não pôde encontrar o host intranet.iesb.br. Verifique o nome e tente
+novamente.
+
+3. Resolver nomes dos hosts para achar os endereços IP.
+
+a) Execute o comando nslookup seguido do endereço IP da sua estação. Qual foi o resultado?
+Servidor:  one.one.one.one
+Address:  1.1.1.1
+*** one.one.one.one não encontrou 192.168.1.5: Non-existent domain
+
+b) Execute o comando nslookup seguido do nome da sua estação. Qual foi o resultado?
+Servidor:  one.one.one.one
+Address:  1.1.1.1
+*** one.one.one.one não encontrou LAPTOP-T73T4MVO: Non-existent domain
+
+c) Execute o comando nslookup seguido do host www.iesb.br. Qual foi o resultado?
+Servidor:  one.one.one.one
+Address:  1.1.1.1
+
+Não é resposta autoritativa:
+Nome:    www.iesb.br
+Address:  54.174.194.96
+
+d) Execute o comando nslookup seguido do host intranet.iesb.br. Qual foi o resultado?
+Servidor:  one.one.one.one
+Address:  1.1.1.1
+*** one.one.one.one não encontrou intranet.iesb.br: Non-existent domain
+
+4. Verificar rotas entre dois hosts.
+
+a) Execute o comando tracert seguido do endereço IP da sua estação. Quantos saltos foram realizados? O destino foi alcançado? 
+16 saltos. Alcançou o destino.
+
+b) Execute o comando tracert seguido do endereço do gateway padrão. Quantos saltos foram realizados? O destino foi alcançado?
+Um salt. Acho que sim...não?
+
+c) Execute o comando tracert www.iesb.br para verificar o roteamento de pacotes. Qual foi o resultado? O destino foi alcançado?
+Foi alcançado. 30 saltos.
+
+d) Execute o comando tracert intranet.iesb.br. Qual foi o resultado? O destino foi alcançado?
+Não é possível resolver o nome do sistema de destino intranet.iesb.br.
+
+e) Execute o comando tracert helpdesk.iesb.br. Qual foi o resultado? O destino foi alcançado?
+30 saltos. Foi alcançado.
+
+
+5. Verificar as conexões estabelecidas pelo host.
+
+a) Execute o comando netstat. Qual foi o resultado?
+Conexões ativas
+
+  Proto  Endereço local         Endereço externo       Estado
+  TCP    192.168.1.5:58152      52.179.224.121:https   ESTABLISHED
+  TCP    192.168.1.5:58157      162.159.137.234:https  ESTABLISHED
+  TCP    192.168.1.5:58165      ec2-34-237-73-95:https  ESTABLISHED
+  TCP    192.168.1.5:58168      ec2-52-202-63-209:5222  ESTABLISHED
+  TCP    192.168.1.5:58616      205.185.194.211:http   ESTABLISHED
+  TCP    192.168.1.5:58631      151.101.205.7:https    ESTABLISHED
+  TCP    192.168.1.5:58635      lb-140-82-112-26-iad:https  ESTABLISHED
+  TCP    192.168.1.5:58648      205.185.194.195:http   ESTABLISHED
+  TCP    192.168.1.5:58708      lb-140-82-113-25-iad:https  ESTABLISHED
+  TCP    192.168.1.5:58756      162.159.130.233:https  ESTABLISHED
+  TCP    192.168.1.5:58759      162.159.134.234:https  ESTABLISHED
+  TCP    192.168.1.5:58764      205.185.194.194:http   ESTABLISHED
+  TCP    192.168.1.5:58773      67.207.85.147:https    CLOSE_WAIT
+  TCP    192.168.1.5:58774      67.207.85.147:https    CLOSE_WAIT
+  TCP    192.168.1.5:58775      67.207.85.147:https    CLOSE_WAIT
+  TCP    192.168.1.5:58778      104.18.58.162:https    ESTABLISHED
+  TCP    192.168.1.5:58783      8.18.25.62:https       ESTABLISHED
+  TCP    192.168.1.5:58785      ec2-52-0-212-131:https  CLOSE_WAIT
+  TCP    192.168.1.5:58786      ec2-3-87-149-58:https  ESTABLISHED
+  TCP    [2804:d59:1ac8:900:19e5:8b19:4883:2a27]:58240  [2606:4700::6812:c73f]:https  ESTABLISHED
+  TCP    [2804:d59:1ac8:900:19e5:8b19:4883:2a27]:58770  [2606:4700::6812:1ad3]:https  ESTABLISHED
+  TCP    [2804:d59:1ac8:900:19e5:8b19:4883:2a27]:58772  [2606:4700::6812:1ad3]:https  ESTABLISHED
+  TCP    [2804:d59:1ac8:900:19e5:8b19:4883:2a27]:58777  [2606:4700:3033::6812:3aa2]:https  ESTABLISHED
+  TCP    [2804:d59:1ac8:900:19e5:8b19:4883:2a27]:58779  [2800:3f0:4001:801::2003]:https  ESTABLISHED
+  TCP    [2804:d59:1ac8:900:19e5:8b19:4883:2a27]:58780  [2606:2800:220:807:12d7:2210:17b1:7cf]:https  ESTABLISHED
+
+b) Execute o comando netstat -n. Qual foi o resultado? Notou algo diferente?
+Reduziu o tamanho da lista de conexões ativas.
+
+c) Execute o comando netstat -na. Qual foi o resultado? Notou algo diferente?
+Agora tenho uma lista gigante de endereços.
+
+d) Execute o comando netstat -nap TCP. Qual foi o resultado? Notou algo diferente?
+Só mostra os indexes chaves da lista
+Proto  Endereço local         Endereço externo       Estado
+
+e) Execute o comando netstat -nap UDP. Qual foi o resultado? Notou algo diferente?
+Mostrou a lista de UDP e os endereços locais.
+
+f) Abra a página do IESB (www.iesb.br) no navegador. Tente identificar o socket criado através do comando netstat. Qual foi o resultado?
+ec2-52-202-63-209:5222
+
+
+
+
+Atividade 2:
+
+1. Realizar uma pesquisa sobre jogos multiplayer escolhendo um jogo para elaborar uma ficha técnica contendo as seguintes informações.
+
+a) Nomo do jogo
+BroForce
+b) Classificação: Local ou Online
+Ambos
+c) Arquitetura: Cliente-Servidor ou Ponto-a-Ponto
+Ponto a ponto
+d) Quantidade de jogadores po sessão.
+4
+e) Problemas comuns do jogo.
+Lag devido a diferença de internet e velcoidade entre os jogadores e suas respectivas nets e máquinas.
