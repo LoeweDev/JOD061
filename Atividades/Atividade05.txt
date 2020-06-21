@@ -64,9 +64,10 @@ public override void OnDisconnected(Photon.Realtime.DisconnectCause cause) {
 }
 
 j) Execute a cena na Unity. Qual foi o resultado na aba Console?
+Deu que conectou.
 
 k) Interrompa a cena na Unity. Qual foi o resultado na aba Console?
-
+Não prinout nada...
 
 
 4. Criar uma room na Photon Cloud.
